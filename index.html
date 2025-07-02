@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olanrewaju Yahya - Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a2f36cc7d6.js" crossorigin="anonymous"></script>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #7928ca, #ff0080);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    .download-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 25px;
+      background: #ff0080;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: #e60073;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      color: #ff0080;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #00ffe0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      background: #141414;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(255, 0, 128, 0.3);
+    }
+
+    .contact-info i {
+      color: #ff0080;
+      margin-right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background: #111;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .download-btn {
+        font-size: 0.95rem;
+      }
+
+      section {
+        padding: 30px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <h1>Olanrewaju Yahya</h1>
+    <p>Backend Developer | Node.js | MongoDB | AWS Certified</p>
+    <a href="Olanrewaju_Yahya_CV.pdf" class="download-btn" download>
+      <i class="fas fa-download"></i> Download CV
+    </a>
+  </header>
+
+  <section>
+    <div class="card contact-info" data-aos="fade-up">
+      <h2 class="section-title">Contact Information</h2>
+      <ul>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:lyrix7000@gmail.com">lyrix7000@gmail.com</a></li>
+        <li><i class="fas fa-phone"></i> <a href="tel:+2348154709101">0815 470 9101</a></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/Olanrewaju-Y" target="_blank">Olanrewaju-Y</a></li>
+      </ul>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h2 class="section-title">Summary</h2>
+      <p>
+        Highly motivated and detail-oriented Backend Developer with expertise in Node.js, MongoDB,
+        JavaScript, HTML, and CSS. Proven ability to design, develop, and deploy scalable backend systems.
+        Certified in AWS Cloud Computing and experienced in deploying backend applications on Render.
+        Currently expanding skills in React.js.
+      </p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h2 class="section-title">Technical Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> JavaScript (Node.js)</li>
+        <li><strong>Databases:</strong> MongoDB</li>
+        <li><strong>Frontend Basics:</strong> HTML, CSS</li>
+        <li><strong>Frontend Framework:</strong> React.js (in progress)</li>
+        <li><strong>APIs:</strong> RESTful API design</li>
+        <li><strong>Cloud:</strong> AWS (Certified)</li>
+        <li><strong>Deployment:</strong> Render</li>
+        <li><strong>OS:</strong> Windows, Linux</li>
+      </ul>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h2 class="section-title">Professional Experience</h2>
+      <ul>
+        <li>Designed and developed RESTful APIs using Node.js and MongoDB</li>
+        <li>Implemented JWT-based authentication and authorization</li>
+        <li>Collaborated with frontend developers for seamless integration</li>
+        <li>Optimized queries for better performance</li>
+        <li>Deployed backend apps on Render</li>
+        <li>Participated in code reviews</li>
+      </ul>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h2 class="section-title">Projects</h2>
+      <ul>
+        <li><strong>BetWise - Sport Betting App:</strong> RESTful API built with Node.js & MongoDB, deployed on Render</li>
+        <li><strong>Callafix - Hire a Service Provider:</strong> Backend system built using GoogleScript, Google Sheets & Drive</li>
+      </ul>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h2 class="section-title">Education & Certifications</h2>
+      <ul>
+        <li><strong>HND, Electrical/Electronics Engineering</strong> - Lagos State Polytechnic</li>
+        <li><strong>AWS Certified Cloud Practitioner</strong> - Amazon Web Services</li>
+      </ul>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h2 class="section-title">References</h2>
+      <p>Available upon request.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Olanrewaju Yahya. All Rights Reserved.
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>
