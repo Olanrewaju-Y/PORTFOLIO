@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Olanrewaju Yahya - Portfolio</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">	
-
-  <!-- FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Audiowide&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a2f36cc7d6.js" crossorigin="anonymous"></script>
 
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
+    :root {
+      --primary-color: #00f0ff;
+      --bg-color: #0f0f1b;
+      --card-bg: #121225;
+      --text-light: #ffffff;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -26,50 +30,51 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f0f1b, #0d0d0d);
-      color: #ffffff;
-      line-height: 1.6;
+      background: linear-gradient(135deg, var(--bg-color), #0d0d0d);
+      color: var(--text-light);
       scroll-behavior: smooth;
+      line-height: 1.6;
     }
 
     nav {
       position: fixed;
       top: 0;
       left: 0;
-      right: 0;
-      background: rgba(0, 0, 40, 0.9);
+      width: 100%;
+      background: rgba(0, 0, 40, 0.85);
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      padding: 10px 50px;
+      padding: 12px 50px;
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
       backdrop-filter: blur(6px);
     }
 
     nav .contact-links a {
-      margin-left: 50px;
-      color: #ffffff;
+      margin-left: 40px;
+      color: var(--text-light);
       text-decoration: none;
       font-size: 0.95rem;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      transition: color 0.3s ease;
     }
 
     nav .contact-links a:hover {
-      color: #33f0ff;
+      color: var(--primary-color);
     }
 
-    .hero {
-      position: relative;
+    header.hero {
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       background: radial-gradient(circle at center, #1a1a40, #0d0d0d);
-      overflow: hidden;
+      position: relative;
       text-align: center;
+      overflow: hidden;
     }
 
     .hero img.bg {
@@ -77,40 +82,35 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.1;
+      opacity: 0.08;
+      filter: grayscale(100%) contrast(1.1);
       z-index: 0;
-      filter: grayscale(100%) contrast(1.2);
     }
 
     .hero-content {
-      position: relative;
       z-index: 1;
       padding: 0 20px;
     }
 
     .hero-content h1 {
-      font-size: 4rem;
-      color: #ffffff;
+      font-family: 'Audiowide', cursive;
+      font-size: 3.5rem;
       margin-bottom: 10px;
-    }
-
-    .hero-content p {
-      color: #ffffff;
-      font-size: 1.5rem;
-      margin-bottom: 30px;
     }
 
     .typewriter {
       display: inline-block;
       overflow: hidden;
       white-space: nowrap;
-      border-right: 3px solid #00f0ff;
+      border-right: 3px solid var(--primary-color);
       animation: typing 3.5s steps(30, end) forwards, blink 0.8s step-end infinite;
+      font-size: 1.4rem;
+      margin-bottom: 30px;
     }
 
     @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
+      from { width: 0; }
+      to { width: 100%; }
     }
 
     @keyframes blink {
@@ -118,12 +118,12 @@
     }
 
     .download-btn {
+      background: var(--primary-color);
+      color: #000;
       padding: 14px 32px;
-      background: #00f0ff;
-      color: black;
-      text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
+      text-decoration: none;
       transition: background 0.3s ease;
     }
 
@@ -131,143 +131,141 @@
       background: #00c0cc;
     }
 
-    section {
-      padding: 80px 20px;
+    main {
+      padding: 100px 20px 60px;
       max-width: 1000px;
       margin: auto;
-      position: relative;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      color: #ffffff;
-      margin-bottom: 25px;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: "";
-      display: block;
-     /* width: 60px; */
-      height: 4px;
-      background: #00f0ff;
-      margin-top: 8px;
-    }
-
-    .card {
-      background: #121225;
-      border-radius: 12px;
-      padding: 100px;
-      margin-bottom: 40px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-      text-align: center;
     }
 
     .illustration {
       display: flex;
       justify-content: center;
-      margin: 20px 0;
+      margin: 30px 0;
     }
 
     .illustration img {
-      max-width: 300px;
+      max-width: 280px;
+      filter: drop-shadow(0 0 10px rgba(0,255,255,0.2));
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      height: 4px;
+      background: var(--primary-color);
+      width: 60px;
+      margin-top: 8px;
     }
 
     ul {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
 
     li {
       margin-bottom: 10px;
     }
 
-    a {
-      color: #ffffff;
-      text-decoration: none;
+    .tech-icons i {
+      font-size: 2rem;
+      margin: 10px 10px 0;
+      color: var(--primary-color);
+      transition: transform 0.3s;
     }
 
-    a:hover {
-      color: #33f0ff;
+    .tech-icons i:hover {
+      transform: scale(1.2);
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
       background: #111;
-      color: #ffffff;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
       .hero-content h1 {
         font-size: 2.5rem;
       }
-      .hero-content p {
-        font-size: 1.2rem;
+
+      .typewriter {
+        font-size: 1.1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px 20px;
+      }
+
+      nav .contact-links a {
+        margin-left: 20px;
+        font-size: 0.85rem;
       }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- Navigation -->
   <nav>
     <div class="contact-links">
       <a href="mailto:lyrix7000@gmail.com"><i class="fas fa-envelope"></i>Email</a>
-      <a href="tel:+2348154709101"><i class="fas fa-phone"></i>+2348154709101</a>
+      <a href="tel:+2348154709101"><i class="fas fa-phone"></i>Call</a>
       <a href="https://github.com/Olanrewaju-Y" target="_blank"><i class="fab fa-github"></i>GitHub</a>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero" data-aos="fade">
-    <img src="profile.jpg" class="bg" alt="Background" />
+  <!-- Hero Section -->
+  <header class="hero" data-aos="fade">
+    <img src="profile.jpg" class="bg" alt="Background overlay" />
     <div class="hero-content">
       <h1>Olanrewaju Yahya</h1>
       <p class="typewriter">Backend Developer | Node.js | MongoDB | AWS Certified</p>
-	<br>
       <a href="Olanrewaju_Yahya_CV.pdf" class="download-btn" download>
         <i class="fas fa-download"></i> Download CV
       </a>
     </div>
+  </header>
 
-  </section>
+  <!-- Main Content -->
+  <main>
 
-<!-- ILLUSTRATION -->
-  <div class="illustration" data-aos="zoom-in">
-    <img src="https://www.svgrepo.com/show/331803/developer.svg" alt="Developer Illustration" />
-  </div>
+    <div class="illustration" data-aos="zoom-in">
+      <img src="https://www.svgrepo.com/show/331803/developer.svg" alt="Developer Illustration" />
+    </div>
 
-<div class="card" data-aos="fade-up">
+    <article class="card" data-aos="fade-up">
       <h2 class="section-title">Introduction</h2>
       <p>
-        Highly motivated and detail-oriented Backend Developer with expertise in Node.js, MongoDB,
-        JavaScript, HTML, and CSS. Proven ability to design, develop, and deploy scalable backend systems.
-        Certified in AWS Cloud Computing and experienced in deploying backend applications on Render.
-        Currently expanding skills in React.js.
+        Passionate and result-driven Backend Developer specializing in Node.js, MongoDB, and scalable RESTful API design.
+        AWS Certified with proven ability to deliver secure and efficient backend solutions. Currently expanding into React.js.
       </p>
-    </div>
+    </article>
 
-
-  <!-- CONTENT SECTIONS 
-  <section>
-    <div class="card contact-info" data-aos="fade-up">
-      <h2 class="section-title">Contact Information</h2>
-      <ul>
-        <li><i class="fas fa-envelope"></i> <a href="mailto:lyrix7000@gmail.com">lyrix7000@gmail.com</a></li>
-        <li><i class="fas fa-phone"></i> <a href="tel:+2348154709101">0815 470 9101</a></li>
-        <li><i class="fab fa-github"></i> <a href="https://github.com/Olanrewaju-Y" target="_blank">Olanrewaju-Y</a></li>
-      </ul>
-    </div>
--->
-    
-
-    <div class="card" data-aos="fade-up">
+    <article class="card" data-aos="fade-up">
       <h2 class="section-title">Technical Skills</h2>
       <ul>
         <li><strong>Languages:</strong> JavaScript (Node.js)</li>
         <li><strong>Databases:</strong> MongoDB</li>
         <li><strong>Frontend:</strong> HTML, CSS, React.js (in progress)</li>
-        <li><strong>APIs:</strong> RESTful API design</li>
+        <li><strong>APIs:</strong> RESTful API development</li>
         <li><strong>Cloud:</strong> AWS (Certified)</li>
         <li><strong>Deployment:</strong> Render</li>
         <li><strong>OS:</strong> Windows, Linux</li>
@@ -281,51 +279,52 @@
         <i class="fab fa-react" title="React.js"></i>
         <i class="fab fa-aws" title="AWS Cloud"></i>
       </div>
-    </div>
+    </article>
 
-    <div class="card" data-aos="fade-up">
+    <article class="card" data-aos="fade-up">
       <h2 class="section-title">Professional Experience</h2>
       <ul>
-        <li>Developed RESTful APIs with Node.js & MongoDB</li>
-        <li>Implemented JWT authentication/authorization</li>
-        <li>Optimized performance and collaborated with frontend teams</li>
-        <li>Deployed backend systems using Render</li>
+        <li>Developed scalable backend APIs with Node.js & MongoDB</li>
+        <li>Implemented authentication using JWT</li>
+        <li>Collaborated with frontend teams for seamless integration</li>
+        <li>Deployed projects using Render & Git workflows</li>
       </ul>
-    </div>
+    </article>
 
-    <div class="card" data-aos="fade-up">
+    <article class="card" data-aos="fade-up">
       <h2 class="section-title">Projects</h2>
       <ul>
-        <li><strong>BetWise:</strong> A sports betting API built with Node.js & MongoDB</li>
-        <li><strong>Callafix:</strong> Hire-a-provider app using GoogleScript + Google Drive</li>
-	<li><strong>Erranding Services:</strong> Online Local Food Market built with Node.js & MongoDB</li>
+        <li><strong>BetWise:</strong> Sports betting API with real-time odds</li>
+        <li><strong>Callafix:</strong> Hire-a-provider app built with Google Script</li>
+        <li><strong>Erranding Services:</strong> Online local food market app</li>
       </ul>
-    </div>
+    </article>
 
-    <div class="card" data-aos="fade-up">
+    <article class="card" data-aos="fade-up">
       <h2 class="section-title">Education & Certifications</h2>
       <ul>
-        <li><strong>HND, Electrical/Electronics Engineering</strong> - Lagos State Polytechnic</li>
-        <li><strong>AWS Certified Cloud Practitioner</strong> - Amazon Web Services</li>
+        <li><strong>HND, Electrical/Electronics Engineering</strong> – Lagos State Polytechnic</li>
+        <li><strong>AWS Certified Cloud Practitioner</strong> – Amazon Web Services</li>
       </ul>
-    </div>
+    </article>
 
-    <div class="card" data-aos="fade-up">
+    <article class="card" data-aos="fade-up">
       <h2 class="section-title">References</h2>
       <p>Available upon request.</p>
-    </div>
-  </section>
+    </article>
 
-  <!-- FOOTER -->
+  </main>
+
+  <!-- Footer -->
   <footer>
     &copy; 2025 Olanrewaju Yahya. All Rights Reserved.
   </footer>
 
-  <!-- AOS Script -->
+  <!-- AOS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000 });
   </script>
-  
+
 </body>
 </html>
